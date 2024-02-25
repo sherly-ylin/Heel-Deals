@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Router } from '@angular/router';
-import { Item } from '../item.model';
+import { ItemData } from '../item.model';
 
 @Component({
   selector: 'app-item-list',
@@ -22,7 +22,7 @@ export class ItemListComponent {
   }
 
 
-  addItem(item: Item){
-    this.itemService.addItem(item.name,item.cost,item.description);
-  }
+  // addItem(item: ){
+  //   this.itemService.addItem(item);
+  // }
 }

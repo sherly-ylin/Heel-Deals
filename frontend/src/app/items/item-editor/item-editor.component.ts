@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ItemService } from '../item.service';
-import { Category, Item } from '../item.model';
+import { Category, ItemData } from '../item.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -60,49 +60,49 @@ export class ItemEditorComponent {
       //     });
       // });
 
-      if (!this.isNew) {
-        this.id = this.route.snapshot.params['item_id'];
-        let currentItem : Item = this.itemService.getItem(this.id) as Item
-        if( currentItem!= null){
-          this.itemForm.setValue({
-            name: currentItem.name,
-            description: currentItem.description,
-            cost: currentItem.cost
-          });
+      // if (!this.isNew) {
+      //   this.id = this.route.snapshot.params['item_id'];
+      //   let currentItem: ItemData = this.itemService.getItem(this.id) as ItemData
+      //   if( currentItem!= null){
+      //     this.itemForm.setValue({
+      //       name: currentItem.name,
+      //       description: currentItem.description,
+      //       cost: currentItem.cost
+      //     });
 
-        }
+      //   }
 
-      }
+      // }
     }
     public onSubmitForm() {
       // First, ensure that the form is valid (all validators pass). Otherwise, display a snackbar error.
-      if (this.itemForm.valid) {
-        // If the item is new, create it.
-        if (this.isNew) {
-          this.itemService.addItem(
-              this.itemForm.value.name!,
-              this.itemForm.value.cost!, 
-              this.itemForm.value.description!
-              )
-          this.onSuccess();
-        } else {
-          // Edit the existing item
-          if(this.itemService.editItem(
-            this.id,
-            this.itemForm.value.name!,
-            this.itemForm.value.cost!, 
-            this.itemForm.value.description!
-            )){
-              this.onSuccess();
-            }else{
-              this.onError();
-            }
-        }
-      } else {
-        this.snackBar.open('Please enter values in the form correctly.', '', {
-          duration: 2000
-        });
-      }
+      // if (this.itemForm.valid) {
+      //   // If the item is new, create it.
+      //   if (this.isNew) {
+      //     this.itemService.addItem(
+      //         this.itemForm.value.name!,
+      //         this.itemForm.value.cost!, 
+      //         this.itemForm.value.description!
+      //         )
+      //     this.onSuccess();
+      //   } else {
+      //     // Edit the existing item
+      //     if(this.itemService.editItem(
+      //       this.id,
+      //       this.itemForm.value.name!,
+      //       this.itemForm.value.cost!, 
+      //       this.itemForm.value.description!
+      //       )){
+      //         this.onSuccess();
+      //       }else{
+      //         this.onError();
+      //       }
+      //   }
+      // } else {
+      //   this.snackBar.open('Please enter values in the form correctly.', '', {
+      //     duration: 2000
+      //   });
+      // }
     }
 
   

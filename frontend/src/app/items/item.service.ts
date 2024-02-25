@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ItemResponse, ItemData } from './item.model';
 import { UserData, UserResponse } from '../models/user.model';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -11,12 +11,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ItemService {
   nextItemId: number = 1;
 
-  items: ItemData[] = [];
+  private items: ReplaySubject<any[]> = new ReplaySubject(1);
+  items$ = this.items.asObservable();
 
   constructor(protected http: HttpClient, protected snackBar: MatSnackBar) {}
 
-  getItems(): Observable<ItemResponse[]>{
-    return this.http.get<ItemResponse[]>('/items');
+  getItems(){
+    return this.http.get<any[]>('/items').subscribe(
+      (value) =>{
+      this.items.next(value);
+    });
   }
 
 
@@ -29,8 +33,8 @@ export class ItemService {
   //   return null;
   // }
 
-  getItem(id: string): Observable<ItemData>{
-    return this.http.get<ItemData>('/items/{id}');
+  getItem(id: string): Observable<any>{
+    return this.http.get<any>('/items/{id}');
   }
 
   // addItem(
