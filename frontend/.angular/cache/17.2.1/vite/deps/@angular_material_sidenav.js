@@ -3,12 +3,7 @@ import {
   CdkScrollableModule,
   ScrollDispatcher,
   ViewportRuler
-<<<<<<< HEAD
 } from "./chunk-FNFWX66I.js";
-=======
-} from "./chunk-EKGVJJWH.js";
->>>>>>> no-backend
-import "./chunk-4TG3WYSD.js";
 import {
   animate,
   state,
@@ -16,6 +11,7 @@ import {
   transition,
   trigger
 } from "./chunk-BUXH7QCS.js";
+import "./chunk-4TG3WYSD.js";
 import {
   Directionality,
   ESCAPE,
@@ -27,11 +23,7 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
-<<<<<<< HEAD
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend
 import {
   DOCUMENT
 } from "./chunk-HLAXY45B.js";

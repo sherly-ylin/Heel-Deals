@@ -11,11 +11,7 @@ import {
   ObserversModule,
   Platform,
   coerceBooleanProperty
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-RSSDDKTO.js
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-GVDAF466.js
 import {
   CommonModule,
   DOCUMENT,
@@ -1585,8 +1581,4 @@ export {
   MatFormField,
   MatFormFieldModule
 };
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-RSSDDKTO.js
 //# sourceMappingURL=chunk-RSSDDKTO.js.map
-=======
-//# sourceMappingURL=chunk-GVDAF466.js.map
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-GVDAF466.js

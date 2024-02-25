@@ -1,10 +1,6 @@
 import {
   MatCommonModule
-<<<<<<< HEAD
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend
 import {
   CommonModule
 } from "./chunk-HLAXY45B.js";

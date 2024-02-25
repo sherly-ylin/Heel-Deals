@@ -13,11 +13,7 @@ import {
   coerceNumberProperty,
   getRtlScrollAxisType,
   supportsScrollBehavior
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-FNFWX66I.js
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-EKGVJJWH.js
 import {
   DOCUMENT
 } from "./chunk-HLAXY45B.js";
@@ -1614,8 +1610,4 @@ export {
   CdkScrollableModule,
   ScrollingModule
 };
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-FNFWX66I.js
 //# sourceMappingURL=chunk-FNFWX66I.js.map
-=======
-//# sourceMappingURL=chunk-EKGVJJWH.js.map
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-EKGVJJWH.js

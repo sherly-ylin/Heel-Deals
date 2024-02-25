@@ -76,39 +76,39 @@ export class ItemEditorComponent {
             cost: currentItem.cost
           });
 
-      //   }
+        }
 
-      // }
+      }
     }
     public onSubmitForm() {
-      // First, ensure that the form is valid (all validators pass). Otherwise, display a snackbar error.
-      // if (this.itemForm.valid) {
-      //   // If the item is new, create it.
-      //   if (this.isNew) {
-      //     this.itemService.addItem(
-      //         this.itemForm.value.name!,
-      //         this.itemForm.value.cost!, 
-      //         this.itemForm.value.description!
-      //         )
-      //     this.onSuccess();
-      //   } else {
-      //     // Edit the existing item
-      //     if(this.itemService.editItem(
-      //       this.id,
-      //       this.itemForm.value.name!,
-      //       this.itemForm.value.cost!, 
-      //       this.itemForm.value.description!
-      //       )){
-      //         this.onSuccess();
-      //       }else{
-      //         this.onError();
-      //       }
-      //   }
-      // } else {
-      //   this.snackBar.open('Please enter values in the form correctly.', '', {
-      //     duration: 2000
-      //   });
-      // }
+      //First, ensure that the form is valid (all validators pass). Otherwise, display a snackbar error.
+      if (this.itemForm.valid) {
+        // If the item is new, create it.
+        if (this.isNew) {
+          this.itemService.addItem(
+              this.itemForm.value.name!,
+              this.itemForm.value.cost!, 
+              this.itemForm.value.description!
+              )
+          this.onSuccess();
+        } else {
+          // Edit the existing item
+          if(this.itemService.editItem(
+            this.id,
+            this.itemForm.value.name!,
+            this.itemForm.value.cost!, 
+            this.itemForm.value.description!
+            )){
+              this.onSuccess();
+            }else{
+              this.onError();
+            }
+        }
+      } else {
+        this.snackBar.open('Please enter values in the form correctly.', '', {
+          duration: 2000
+        });
+      }
     }
 
   

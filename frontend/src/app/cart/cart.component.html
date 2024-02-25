@@ -1,7 +1,11 @@
 <div class="bg">  
      <div class="container">
             <div class="top-container">
-                <cart-item-card 
+                <div class="text" *ngIf="cartService.getItems()==null">
+                    <h2 >You don't have any items in your cart yet!</h2>
+                </div>
+
+                <cart-item-card
                 [item]="item"
                 *ngFor="let item of cartService.getItems()"
                 (deleteButtonPressed)="cartService.deleteItem($event)"
