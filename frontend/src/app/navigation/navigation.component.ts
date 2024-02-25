@@ -9,9 +9,10 @@ import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
 export class NavigationComponent {
   public static Route = {
     path: 'navigation',
+    title: 'Navigation',
     component: NavigationComponent
   }
-  constructor(public router: Router){
+  constructor(public route: ActivatedRoute, public router: Router){
 
   }
 }

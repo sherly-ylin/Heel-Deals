@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Router } from '@angular/router';
-import { Item } from './item.model';
+import { Item } from '../item.model';
 
 @Component({
   selector: 'app-item-list',

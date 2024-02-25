@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ItemService } from '../item.service';
-import { Category, Item } from '../item-list/item.model';
+import { Category, Item } from '../item.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 

@@ -11,8 +11,6 @@ const routes: Routes = [
   NavigationComponent.Route,
   ItemEditorComponent.Route,
   ItemListComponent.Route
-
-  
 ]
 
 @NgModule({

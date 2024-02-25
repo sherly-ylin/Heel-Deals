@@ -30,13 +30,13 @@ async def read_root():
     return {"message": "Hello World"}
 
 
-@app.post("/items/")
+@app.post("/items")
 async def create_item(name: str, cost: float, description: str, category: int, user_id: str):
     item = Item({
         'name':name,
         'cost':cost,
-        'description':description,
-        'category':category, 
+        'description': description,
+        'category': category, 
         'user_id': user_id
     })
     item.save()
@@ -53,7 +53,7 @@ async def retrieve_item(item_id: str):
     return item
 
 
-@app.post("/users/")
+@app.post("/users")
 async def create_user(name: str, phone: int, email: str, username: str, password: str):
     user = User({
         'name': name, 

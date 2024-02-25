@@ -1,6 +1,7 @@
 import {
   DomRendererFactory2
-} from "./chunk-UTSTBPUG.js";
+} from "./chunk-IBN6NZSI.js";
+import "./chunk-2RSBVCTZ.js";
 import {
   DOCUMENT
 } from "./chunk-IM3IYZEA.js";
