@@ -9,11 +9,11 @@ import { ItemListComponent } from '../items/item-list/item-list.component';
 })
 export class NavigationComponent {
   public static Route = {
-    path: 'navigation',
+    path: '',
     title: 'Navigation',
     component: NavigationComponent
   }
   constructor(public route: ActivatedRoute, public router: Router){
-    router.navigateByUrl('/items');
+    // router.navigateByUrl('/items');
   }
 }

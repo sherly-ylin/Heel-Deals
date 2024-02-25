@@ -7,10 +7,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ItemListComponent
-  },
+  // {
+  //   path: '',
+  //   component: ItemListComponent
+  // },
   // HomeComponent.Route,
   // NavigationComponent.Route,
   ItemEditorComponent.Route,

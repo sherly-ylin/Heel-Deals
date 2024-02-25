@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* HTTP and Auth */
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 // import { AuthModule } from '@auth0/auth0-angular';
 
 /* UI / Material Dependencies */
@@ -49,7 +50,8 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
+    
     /* Material UI */
     MatButtonModule,
     MatCardModule,

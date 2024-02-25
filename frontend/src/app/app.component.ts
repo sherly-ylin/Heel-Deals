@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  template: '<body><app-navigation></app-navigation></body>'
+  template: '<app-navigation></app-navigation>'
 })
 export class AppComponent {
   title = 'frontend';

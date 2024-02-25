@@ -12,9 +12,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ItemEditorComponent {
   public static Route = {
-    path: 'items/edit/:item_id',
+    path: 'item/edit',
     title: 'Item Editor',
-    component: ItemEditorComponent
+    children:[
+      {
+        path: ':item_id',
+        component: ItemEditorComponent
+      }
+    ]
+    
   }
 
   // categoryKeys = Object.entries(Category).map(([key, value]) => ({ name:key, value:value }));
@@ -33,7 +39,7 @@ export class ItemEditorComponent {
   })
 
   // Current id of the item
-  id: number = -1
+  id: number = 0
   // whether or not is new
   isNew: boolean = false;
 
@@ -47,7 +53,7 @@ export class ItemEditorComponent {
     ){}
     ngOnInit():void{
       this.id = this.route.snapshot.params['item_id'];
-      this.isNew = this.route.snapshot.params['item_id'] == 'new';
+      this.isNew = !this.itemService.hasItem(this.id);
       // If the timer is not new, set existing timer data and update the forms.
       // if (!this.isNew) {
       //   this.id = route.snapshot.params['pomo_id'];
