@@ -21,6 +21,7 @@
             [item]="item"
             *ngFor="let item of itemService.getItems()" 
             (addButtonPressed)="addItem($event)"
+            (deleteButtonPressed)="itemService.deleteItem($event)"
             />
         </mat-card-content>
       </div>

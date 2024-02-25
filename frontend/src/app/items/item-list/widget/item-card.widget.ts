@@ -10,5 +10,6 @@ import { ItemData } from "../../item.model";
 export class ItemCard{
     @Input() item!: ItemData;
     @Output() addButtonPressed = new EventEmitter<ItemData>();
+    @Output() deleteButtonPressed = new EventEmitter<ItemData>()
     constructor(){}
 }

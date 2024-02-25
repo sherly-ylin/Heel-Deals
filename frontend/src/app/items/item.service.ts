@@ -86,14 +86,9 @@ export class ItemService {
   //   return this.http.put<ItemResponse>('/items', request);
   // }
 
-  deleteItem(
-    id: number,
-    name: string,
-    cost: number,
-    description: string
-    ): boolean{
+  deleteItem(item: ItemData): boolean{
       for (let i = 0; i < this.items.length; i++) {
-        if (this.items[i].id == id) {
+        if (this.items[i].id == item.id) {
           this.items.splice(i,1);
           return true;
         }

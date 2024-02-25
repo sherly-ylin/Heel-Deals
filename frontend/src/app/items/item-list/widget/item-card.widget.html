@@ -35,6 +35,12 @@
                     <mat-icon>edit</mat-icon>
                 </button>
             </a>
+            <a class="links"
+            (click)="deleteButtonPressed.emit(item)">
+                <button mat-mini-fab >
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </a>
             
         </mat-card-actions>
     </div>
