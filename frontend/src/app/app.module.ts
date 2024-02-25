@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* HTTP and Auth */
 import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 // import { AuthModule } from '@auth0/auth0-angular';
 
 /* UI / Material Dependencies */
@@ -47,6 +48,7 @@ import { ItemCard } from './items/item-list/widget/item-card.widget';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
 
     /* Material UI */
     MatButtonModule,
