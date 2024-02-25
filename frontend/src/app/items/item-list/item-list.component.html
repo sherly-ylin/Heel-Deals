@@ -9,7 +9,7 @@
         <item-card
           [item]="item"
           (addButtonPressed)="addItem($event)"
-          *ngFor="let item of itemService.getItems()" 
+          *ngFor="let item of (itemService.items$ | async)!" 
           />
       </mat-card-content>
     </div>
