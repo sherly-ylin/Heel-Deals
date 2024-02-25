@@ -8,10 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent {
   public static Route = {
-    path: '',
+    path: '/home',
     title: 'Heel Deals',
     component: HomeComponent
   }
 
   constructor(public route: ActivatedRoute, public router: Router){}
+
 }

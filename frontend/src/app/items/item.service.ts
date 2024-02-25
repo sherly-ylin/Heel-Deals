@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ItemResponse, ItemData } from './item.model';
 import { UserData, UserResponse } from '../models/user.model';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -13,6 +13,7 @@ export class ItemService {
 
   items: ItemData[] = [];
 
+  nextItemIdChange: Subject<number> = new Subject<number>();
   constructor(protected http: HttpClient, protected snackBar: MatSnackBar) {}
 
   // getItems(): Observable<ItemResponse[]>{
@@ -49,6 +50,8 @@ export class ItemService {
       }
       this.items.push(item);
       console.log("new item added!");
+      
+      this.nextItemId++;
   }
 
   // addItem(request: ItemResponse): Observable<ItemResponse>{

@@ -1,9 +1,9 @@
 import {
   MatCommonModule
-} from "./chunk-2KXOTLWV.js";
+} from "./chunk-3YSWN4LC.js";
 import {
   DOCUMENT
-} from "./chunk-IM3IYZEA.js";
+} from "./chunk-HLAXY45B.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -37,7 +37,8 @@ import {
   ɵɵelementEnd,
   ɵɵelementStart,
   ɵɵstyleProp
-} from "./chunk-KEC4IYO5.js";
+} from "./chunk-WYJQ4NUU.js";
+import "./chunk-23LPRKUQ.js";
 
 // ../../node_modules/@angular/material/fesm2022/progress-bar.mjs
 var MAT_PROGRESS_BAR_DEFAULT_OPTIONS = new InjectionToken("MAT_PROGRESS_BAR_DEFAULT_OPTIONS");

@@ -1,11 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav
-      #drawer
-      class="sidenav"
-      fixedInViewport>
+    <!-- <mat-sidenav>
       <div class="inner-sidenav-container">
         <mat-nav-list>
-          <a mat-list-item class="logo-item" routerLink="/" routerLinkActive="active">
+          <a mat-list-item class="logo-item" routerLink="/">
             <picture>
                 <source
                 class="logo" srcset="/assets/unc-logo.jpg" alt="Logo" />
@@ -13,34 +10,29 @@
             </picture>
           </a>
         </mat-nav-list>
-
-        
       </div>
-    </mat-sidenav>
-
-    
-  
+    </mat-sidenav> -->
 
     <mat-sidenav-content>
       <mat-toolbar color="primary">
         <div class="toolbar">
-          <button mat-button><h1>Menu</h1></button>
-          <button mat-button [routerLink]="['/']">
+          
+          <button mat-button appearance="outlined"><h1>Menu</h1></button>
+          <button mat-button appearance="outlined" [routerLink]="['/home']">
             <h1>Home</h1>
           </button>
+
+          <!-- <button mat-button appearance="outlined" (click)="router.navigate(['/items/edit/new'])"><h1>Post Item</h1></button> -->
+          <button mat-button appearance="outlined">
+            <h1>Cart</h1>
+          </button>
+          
         </div>
-        
       </mat-toolbar>
 
-      <!-- <mat-nav-list>
-        <div>
-          <a mat-list-item routerLink="/">
-            <h1>Home</h1>
-          </a>
-        </div>
-      </mat-nav-list> -->
+      <div>
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
-
-    
   </mat-sidenav-container>
   

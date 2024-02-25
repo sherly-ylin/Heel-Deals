@@ -10,17 +10,24 @@ import { ItemData } from '../item.model';
 })
 export class ItemListComponent {
   public static Route = {
-    path: 'items',
+    path: '',
     title: 'Items',
     component: ItemListComponent
   }
   
+  protected nextItemId: number;
+  private _subscription: any;
+
   constructor(
     public itemService: ItemService, 
     public router: Router){
-
+      this.nextItemId = itemService.nextItemId;
+      this._subscription = itemService.nextItemIdChange.subscribe(
+        (value) => {
+          this.nextItemId = value;
+        }
+      );
   }
-
 
   addItem(item: ItemData){
     this.itemService.addItem(item.name,item.cost,item.description);

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
+import { ItemListComponent } from '../items/item-list/item-list.component';
 
 @Component({
   selector: 'app-navigation',
@@ -13,6 +14,6 @@ export class NavigationComponent {
     component: NavigationComponent
   }
   constructor(public route: ActivatedRoute, public router: Router){
-
+    router.navigateByUrl('/items');
   }
 }

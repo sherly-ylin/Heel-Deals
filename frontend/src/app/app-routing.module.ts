@@ -7,8 +7,12 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 
 const routes: Routes = [
-  HomeComponent.Route,
-  NavigationComponent.Route,
+  {
+    path: '',
+    component: ItemListComponent
+  },
+  // HomeComponent.Route,
+  // NavigationComponent.Route,
   ItemEditorComponent.Route,
   ItemListComponent.Route
 ]
