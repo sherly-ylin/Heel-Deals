@@ -1,0 +1,62 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmitForm()">
+    <mat-card appearance="outlined">
+        <!-- Header -->
+        <mat-card-header>
+            <mat-card-title *ngIf="isNew">Create Item</mat-card-title>
+            <mat-card-title *ngIf="!isNew">Update Item</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <!-- Name -->
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label> Item Name </mat-label>
+                <input
+                    matInput
+                    placeholder="Item Name"
+                    formControlName="name"
+                    name="name"
+                    required />
+            </mat-form-field>
+
+            <!-- Cost -->
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label> Item Cost </mat-label>
+                <input
+                    matInput
+                    type="number"
+                    placeholder="Item Cost"
+                    formControlName="cost"
+                    name="cost"
+                    required />
+            </mat-form-field>
+
+            <!-- Description -->
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label> Item Description </mat-label>
+                <input
+                    matInput
+                    placeholder="Item Description"
+                    formControlName="description"
+                    name="description"
+                    required />
+            </mat-form-field>
+
+            <!-- Category -->
+            <!-- <mat-label>Category</mat-label>
+            <mat-select [formControl]="categoryControl" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let name of categoryKeys" 
+                            [value] = categoryControl[key]>
+                            {{categoryControl[name]}}</mat-option>
+                
+            </mat-select>
+            @if (categoryControl.hasError('required')) {
+                <mat-error>Please choose an category</mat-error>
+            } -->
+
+        </mat-card-content>
+
+
+    </mat-card>
+
+</form>

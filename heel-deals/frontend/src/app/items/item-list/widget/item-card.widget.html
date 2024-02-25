@@ -1,0 +1,36 @@
+<mat-card class="card" appearance="outlined">
+    <mat-card-header>
+        <div class="top-container">
+            <!--item image-->
+            <img mat-cart-image src=""/>
+            <mat-card-title class="name">
+                {{item.name}}
+            </mat-card-title>
+            <mat-card-subtitle class="cost">
+                {{item.cost | currency}}
+            </mat-card-subtitle>
+        </div>
+    </mat-card-header>
+    <div class="bottom-container">
+        <mat-card-content class="description">
+            <p>
+                {{item.description}}
+            </p>
+        
+        </mat-card-content>
+        
+        <mat-card-actions class="buttons">
+            <a class="links"
+                [routerLink]="['']">
+                <button mat-stroked-button (click)="addButtonPressed.emit(item)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </a>
+            <button mat-icon-button class="links"
+                [routerLink]="['/item/edit', item.id]">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </mat-card-actions>
+    </div>
+    
+</mat-card>

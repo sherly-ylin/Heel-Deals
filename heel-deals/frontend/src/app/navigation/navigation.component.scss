@@ -1,0 +1,38 @@
+.logo {
+    margin: 0;
+    height: 32px;
+}
+
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 200px;
+}
+
+.inner-sidenav-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    background: #4786C6;
+}
+
+.mat-toolbar {
+    width: 100%;
+}
+
+.toolbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

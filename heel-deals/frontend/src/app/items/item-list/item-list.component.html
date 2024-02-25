@@ -1,0 +1,25 @@
+<mat-card appearance="outlined">
+    <div>
+      <mat-card-header>
+        <mat-card-title>Items</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <!-- List of items -->
+        <item-card
+          [item]="item"
+          (addButtonPressed)="addItem($event)"
+          *ngFor="let item of itemService.getItems()" 
+          />
+      </mat-card-content>
+    </div>
+  
+    <mat-card-actions>
+      <button
+        mat-stroked-button
+        (click)="router.navigate(['/item/edit/new'])">
+        Create Item
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  
