@@ -29,8 +29,8 @@ export class CartService {
 
 
 
-  getItems(){
-    return this.items;
+  getItems(): ItemData[] | null {
+    return this.items.length==0?null:this.items;
   }
 
   getTotalCost():number{

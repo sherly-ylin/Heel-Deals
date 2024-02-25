@@ -1,5 +1,9 @@
 .mat-mdc-card {
-    margin: 1em;
+    // margin: 1em;
+    position: relative;
+    top: 10vh;
+    align-self: center;
+    min-width: 60vw;
     max-width: 640px;
 }
 
@@ -22,4 +26,6 @@ mat-card-content {
 
 mat-card{
     // background-color: #7BAFD4;
+    
 }
+

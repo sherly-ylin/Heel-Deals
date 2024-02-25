@@ -4,11 +4,7 @@ import {
   MatRippleLoader,
   MatRippleModule,
   Platform
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-D6KPGJRT.js
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-N7MB64FK.js
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -1199,8 +1195,4 @@ export {
   MatIconAnchor,
   MatButtonModule
 };
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-D6KPGJRT.js
 //# sourceMappingURL=chunk-D6KPGJRT.js.map
-=======
-//# sourceMappingURL=chunk-N7MB64FK.js.map
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-N7MB64FK.js

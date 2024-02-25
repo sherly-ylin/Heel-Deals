@@ -7,11 +7,7 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-RC354RIP.js
 } from "./chunk-FNFWX66I.js";
-=======
-} from "./chunk-EKGVJJWH.js";
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-52DBUF6I.js
 import {
   BidiModule,
   Directionality,
@@ -23,11 +19,7 @@ import {
   coerceCssPixelValue,
   hasModifierKey,
   supportsScrollBehavior
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-RC354RIP.js
 } from "./chunk-3YSWN4LC.js";
-=======
-} from "./chunk-CNZU7HZ6.js";
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-52DBUF6I.js
 import {
   DOCUMENT,
   Location
@@ -2768,8 +2760,4 @@ export {
   Overlay,
   OverlayModule
 };
-<<<<<<< HEAD:frontend/.angular/cache/17.2.1/vite/deps/chunk-RC354RIP.js
 //# sourceMappingURL=chunk-RC354RIP.js.map
-=======
-//# sourceMappingURL=chunk-52DBUF6I.js.map
->>>>>>> no-backend:frontend/.angular/cache/17.2.1/vite/deps/chunk-52DBUF6I.js
