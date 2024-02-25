@@ -27,7 +27,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
@@ -37,7 +37,7 @@ import { ItemCard } from './items/item-list/widget/item-card.widget';
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
+    HomeComponent,
     NavigationComponent,
     ItemListComponent,
     ItemEditorComponent,

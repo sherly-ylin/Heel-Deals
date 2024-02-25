@@ -10,7 +10,7 @@ import { Item } from './item.model';
 })
 export class ItemListComponent {
   public static Route = {
-    path: '',
+    path: 'items',
     title: 'Items',
     component: ItemListComponent
   }

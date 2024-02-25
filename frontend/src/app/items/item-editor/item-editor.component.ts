@@ -20,7 +20,7 @@ export class ItemEditorComponent {
   // categoryKeys = Object.entries(Category).map(([key, value]) => ({ name:key, value:value }));
 
   /** Form controls (individual form items) */
-  nameControl = new FormControl('name', [Validators.required]);
+  nameControl = new FormControl('', [Validators.required]);
   descriptionControl = new FormControl('', [Validators.required]);
   costControl = new FormControl(0, [Validators.required]);
   // categoryControl = new FormControl<Category|null>(null, [Validators.required]);
@@ -46,7 +46,7 @@ export class ItemEditorComponent {
     protected snackBar: MatSnackBar
     ){}
     ngOnInit():void{
-      this.id = this.route.snapshot.params['item_id']
+      this.id = this.route.snapshot.params['item_id'];
       this.isNew = this.route.snapshot.params['item_id'] == 'new';
       // If the timer is not new, set existing timer data and update the forms.
       // if (!this.isNew) {
@@ -107,7 +107,7 @@ export class ItemEditorComponent {
 
   
     private onSuccess(): void {
-      this.router.navigate(['/items/']);
+      this.router.navigate(['/items']);
   
       let message: string = !this.isNew ? 'Item Updated' : 'Item Created';
   

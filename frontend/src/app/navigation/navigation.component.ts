@@ -8,7 +8,7 @@ import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
 })
 export class NavigationComponent {
   public static Route = {
-    path: '/navigation',
+    path: 'navigation',
     title: 'Navigation',
     component: NavigationComponent
   }

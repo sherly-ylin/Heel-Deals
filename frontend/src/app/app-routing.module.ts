@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomeComponent } from './home/home.component';
 import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
 
 const routes: Routes = [
-  // HomePageComponent.Route,
+  HomeComponent.Route,
+  NavigationComponent.Route,
   ItemEditorComponent.Route,
   ItemListComponent.Route
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
