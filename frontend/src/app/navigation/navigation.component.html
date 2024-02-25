@@ -1,11 +1,8 @@
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav
-      #drawer
-      class="sidenav"
-      fixedInViewport>
+<!-- <mat-sidenav-container class="sidenav-container"> -->
+    <!-- <mat-sidenav>
       <div class="inner-sidenav-container">
         <mat-nav-list>
-          <a mat-list-item class="logo-item" routerLink="/" routerLinkActive="active">
+          <a mat-list-item class="logo-item" routerLink="/">
             <picture>
                 <source
                 class="logo" srcset="/assets/unc-logo.jpg" alt="Logo" />
@@ -14,25 +11,33 @@
           </a>
         </mat-nav-list>
       </div>
-    </mat-sidenav>
+    </mat-sidenav> -->
 
-    <div>
-        <!-- <a mat-list-item routerLink="/about">About</a>
-        <mat-divider></mat-divider> -->
-        <div>
-          <a mat-list-item routerLink="/">
-            Home
-          </a>
-        </div>
-    </div>
-
-    <mat-sidenav-content>
+    <!-- <mat-sidenav-content> -->
       <mat-toolbar color="primary">
         <div class="toolbar">
-          <button mat-stroke-button>Menu</button>
+          <a class="logo" routerLink="/">
+            <img src="/assets/heeldeals-logo.png" alt="Logo">
+          </a>
+          
+          <!-- <button mat-button appearance="outlined" [routerLink]="['/']"><h1>Browse</h1></button>
+          <button mat-button appearance="outlined" [routerLink]="['/home']">
+            <h1>Home</h1>
+          </button> -->
+
+          <!-- <button mat-button appearance="outlined" (click)="router.navigate(['/items/edit/new'])"><h1>Post Item</h1></button> -->
+            <button mat-button appearance="outlined" [routerLink]="['/cart']">
+              <h1>Cart</h1>
+            </button>
+
+          
         </div>
       </mat-toolbar>
-    </mat-sidenav-content>
 
-  </mat-sidenav-container>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+    <!-- </mat-sidenav-content> -->
+  <!-- </mat-sidenav-container> -->
+  
   

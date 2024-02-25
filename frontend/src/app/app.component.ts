@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>'
+  template: '<app-navigation></app-navigation>'
 })
 export class AppComponent {
   title = 'frontend';
 
-  constructor(){}
+  constructor(private router: Router){}
 
 }

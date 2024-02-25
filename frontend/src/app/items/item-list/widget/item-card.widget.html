@@ -2,34 +2,40 @@
     <mat-card-header>
         <div class="top-container">
             <!--item image-->
-            <img mat-cart-image src=""/>
+            <img mat-card-md-image src="/assets/no-image2.png"/>
             <mat-card-title class="name">
                 {{item.name}}
             </mat-card-title>
-            <mat-card-subtitle class="cost">
-                {{item.cost | currency}}
-            </mat-card-subtitle>
+
+            <mat-card-content class="description">
+                Description: {{item.description}}
+            </mat-card-content>
+            
         </div>
     </mat-card-header>
     <div class="bottom-container">
-        <mat-card-content class="description">
-            <p>
-                {{item.description}}
-            </p>
-        
+        <mat-card-content class="cost" *ngIf="item.cost>0">
+            {{item.cost | currency}}
         </mat-card-content>
+
+        <div class="cost" *ngIf="item.cost==0">
+            <h2>Free!</h2>
+        </div>
         
         <mat-card-actions class="buttons">
             <a class="links"
                 [routerLink]="['']">
-                <button mat-stroked-button (click)="addButtonPressed.emit(item)">
+                <button mat-mini-fab  (click)="addButtonPressed.emit(item)">
                     <mat-icon>add</mat-icon>
                 </button>
             </a>
-            <button mat-icon-button class="links"
-                [routerLink]="['/item/edit', item.id]">
-                <mat-icon>edit</mat-icon>
-            </button>
+            <a class="links"
+            [routerLink]="['/item/edit', item.id]">
+                <button mat-mini-fab >
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </a>
+            
         </mat-card-actions>
     </div>
     

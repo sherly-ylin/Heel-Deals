@@ -1,0 +1,23 @@
+<div class="bg">  
+     <div class="container">
+            <div class="top-container">
+                <cart-item-card 
+                [item]="item"
+                *ngFor="let item of cartService.getItems()"
+                (deleteButtonPressed)="cartService.deleteItem($event)"
+                ></cart-item-card>
+            </div>
+            <mat-divider></mat-divider>
+
+
+            <div class="bottom-container">
+                <h2>Summary: {{ cartService.getTotalCost() | currency }}</h2>
+                <a class="button"
+                    [routerLink]="['']">
+                    <button mat-raised-button color="primary">
+                        Checkout
+                    </button>
+                </a>
+            </div>
+        </div>
+</div>   

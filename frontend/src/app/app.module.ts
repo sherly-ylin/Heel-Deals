@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* HTTP and Auth */
 import { RouterModule } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 // import { AuthModule } from '@auth0/auth0-angular';
 
 /* UI / Material Dependencies */
@@ -35,6 +35,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemCard } from './items/item-list/widget/item-card.widget';
+import { CartComponent } from './cart/cart.component';
+import { CartItemCard } from './cart/widget/cart-item-card.widget';
 
 @NgModule({
   declarations: [
@@ -43,13 +45,15 @@ import { ItemCard } from './items/item-list/widget/item-card.widget';
     NavigationComponent,
     ItemListComponent,
     ItemEditorComponent,
-    ItemCard
+    ItemCard,
+    CartComponent,
+    CartItemCard
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    
     /* Material UI */
     MatButtonModule,
     MatCardModule,

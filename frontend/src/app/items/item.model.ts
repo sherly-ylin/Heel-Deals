@@ -10,11 +10,12 @@ export enum Category{
 
 
 export interface ItemData {
-    id: string | null;
+    // id: string | null;
+    id: number;
     name: string;
     cost: number;
     description: string;
-    category: string;
+    // category: string;
 }
 
 export interface ItemResponse {

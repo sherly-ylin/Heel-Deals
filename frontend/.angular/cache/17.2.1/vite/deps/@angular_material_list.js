@@ -1,9 +1,20 @@
 import {
+<<<<<<< HEAD
   NG_VALUE_ACCESSOR
 } from "./chunk-IL5F2IPW.js";
 import {
   SelectionModel
 } from "./chunk-4TG3WYSD.js";
+=======
+  SelectionModel
+} from "./chunk-4TG3WYSD.js";
+import {
+  MatDividerModule
+} from "./chunk-KRB7GFO2.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-IL5F2IPW.js";
+>>>>>>> no-backend
 import {
   A,
   CdkObserveContent,
@@ -21,7 +32,11 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
+<<<<<<< HEAD
 } from "./chunk-3YSWN4LC.js";
+=======
+} from "./chunk-CNZU7HZ6.js";
+>>>>>>> no-backend
 import {
   CommonModule,
   NgTemplateOutlet
@@ -85,6 +100,7 @@ import {
   merge,
   takeUntil
 } from "./chunk-23LPRKUQ.js";
+<<<<<<< HEAD
 
 // ../../node_modules/@angular/material/fesm2022/divider.mjs
 var _MatDivider = class _MatDivider {
@@ -187,6 +203,8 @@ var MatDividerModule = _MatDividerModule;
     }]
   }], null, null);
 })();
+=======
+>>>>>>> no-backend
 
 // ../../node_modules/@angular/material/fesm2022/list.mjs
 var _c0 = ["*"];

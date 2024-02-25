@@ -12,16 +12,22 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ItemEditorComponent {
   public static Route = {
-    path: 'items/edit/:item_id',
+    path: 'item/edit',
     title: 'Item Editor',
-    component: ItemEditorComponent
+    children:[
+      {
+        path: ':item_id',
+        component: ItemEditorComponent
+      }
+    ]
+    
   }
 
   // categoryKeys = Object.entries(Category).map(([key, value]) => ({ name:key, value:value }));
 
   /** Form controls (individual form items) */
   nameControl = new FormControl('', [Validators.required]);
-  descriptionControl = new FormControl('', [Validators.required]);
+  descriptionControl = new FormControl('');
   costControl = new FormControl(0, [Validators.required]);
   // categoryControl = new FormControl<Category|null>(null, [Validators.required]);
 
@@ -33,7 +39,7 @@ export class ItemEditorComponent {
   })
 
   // Current id of the item
-  id: number = -1
+  id: number = 0
   // whether or not is new
   isNew: boolean = false;
 
@@ -47,7 +53,7 @@ export class ItemEditorComponent {
     ){}
     ngOnInit():void{
       this.id = this.route.snapshot.params['item_id'];
-      this.isNew = this.route.snapshot.params['item_id'] == 'new';
+      this.isNew = !this.itemService.hasItem(this.id);
       // If the timer is not new, set existing timer data and update the forms.
       // if (!this.isNew) {
       //   this.id = route.snapshot.params['pomo_id'];
@@ -60,15 +66,15 @@ export class ItemEditorComponent {
       //     });
       // });
 
-      // if (!this.isNew) {
-      //   this.id = this.route.snapshot.params['item_id'];
-      //   let currentItem: ItemData = this.itemService.getItem(this.id) as ItemData
-      //   if( currentItem!= null){
-      //     this.itemForm.setValue({
-      //       name: currentItem.name,
-      //       description: currentItem.description,
-      //       cost: currentItem.cost
-      //     });
+      if (!this.isNew) {
+        this.id = this.route.snapshot.params['item_id'];
+        let currentItem : ItemData = this.itemService.getItem(this.id) as ItemData
+        if( currentItem!= null){
+          this.itemForm.setValue({
+            name: currentItem.name,
+            description: currentItem.description,
+            cost: currentItem.cost
+          });
 
       //   }
 
@@ -107,7 +113,7 @@ export class ItemEditorComponent {
 
   
     private onSuccess(): void {
-      this.router.navigate(['/items']);
+      this.router.navigate(['/']);
   
       let message: string = !this.isNew ? 'Item Updated' : 'Item Created';
   

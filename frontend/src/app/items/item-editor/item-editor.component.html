@@ -24,21 +24,21 @@
                 <input
                     matInput
                     type="number"
-                    placeholder="Item Cost"
+                    placeholder="Item Cost ($)"
                     formControlName="cost"
                     name="cost"
+                    min="0"
                     required />
             </mat-form-field>
 
             <!-- Description -->
             <mat-form-field appearance="outline" color="accent">
                 <mat-label> Item Description </mat-label>
-                <input
-                    matInput
-                    placeholder="Item Description"
-                    formControlName="description"
-                    name="description"
-                    required />
+                <textarea
+                matInput
+                placeholder="Item description here."
+                formControlName="description"
+                name="description"></textarea>
             </mat-form-field>
 
             <!-- Category -->
@@ -53,7 +53,16 @@
             @if (categoryControl.hasError('required')) {
                 <mat-error>Please choose an category</mat-error>
             } -->
+            <!-- Save Button -->
 
+            <mat-card-actions>
+                <button mat-stroked-button type="submit" [disabled]="itemForm.invalid">
+                SAVE
+                </button>
+                <button mat-stroked-button routerLink="/">
+                    CANCEL
+                </button>
+            </mat-card-actions>
         </mat-card-content>
 
 
