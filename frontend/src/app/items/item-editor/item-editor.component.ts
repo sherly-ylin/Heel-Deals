@@ -27,7 +27,7 @@ export class ItemEditorComponent {
 
   /** Form controls (individual form items) */
   nameControl = new FormControl('', [Validators.required]);
-  descriptionControl = new FormControl('', [Validators.required]);
+  descriptionControl = new FormControl('');
   costControl = new FormControl(0, [Validators.required]);
   // categoryControl = new FormControl<Category|null>(null, [Validators.required]);
 
@@ -113,7 +113,7 @@ export class ItemEditorComponent {
 
   
     private onSuccess(): void {
-      this.router.navigate(['/items']);
+      this.router.navigate(['/']);
   
       let message: string = !this.isNew ? 'Item Updated' : 'Item Created';
   

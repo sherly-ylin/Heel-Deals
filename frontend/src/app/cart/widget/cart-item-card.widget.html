@@ -1,0 +1,13 @@
+<mat-card class="card" appearance="outlined">
+    <mat-card-title class="name">
+        {{item.name}}
+    </mat-card-title>
+    <mat-card-title class="cost">
+        {{item.cost | currency}}
+    </mat-card-title>
+    <mat-card-actions>
+        <button mini-fab (click)="deleteButtonPressed.emit(item)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

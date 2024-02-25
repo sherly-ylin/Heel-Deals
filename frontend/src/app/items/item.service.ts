@@ -11,7 +11,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ItemService {
   nextItemId: number = 1;
 
-  items: ItemData[] = [];
+  items: ItemData[] = [
+    {id: 0,
+      name: "name",
+      cost: 0,
+      description: "description"}
+  ];
 
   nextItemIdChange: Subject<number> = new Subject<number>();
   constructor(protected http: HttpClient, protected snackBar: MatSnackBar) {}

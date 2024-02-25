@@ -4,17 +4,17 @@ import { HomeComponent } from './home/home.component';
 import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
-
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: ItemListComponent
-  // },
   // HomeComponent.Route,
   // NavigationComponent.Route,
   ItemEditorComponent.Route,
-  ItemListComponent.Route
+  ItemListComponent.Route,
+  {
+    path: 'cart',
+    component: CartComponent
+  }
 ]
 
 @NgModule({

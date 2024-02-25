@@ -1,0 +1,30 @@
+
+.top-container{
+    min-height: 60vh;
+    max-height: 80vh;
+    overflow: scroll;
+}
+
+.bottom-container{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    justify-content: space-evenly;
+}
+
+
+.container{
+    height: 100%;
+    width: 90%;
+    margin: 20px;
+    background-color: #fff;
+}
+
+.bg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
