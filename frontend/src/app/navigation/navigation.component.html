@@ -13,26 +13,34 @@
             </picture>
           </a>
         </mat-nav-list>
+
+        
       </div>
     </mat-sidenav>
 
-    <div>
-        <!-- <a mat-list-item routerLink="/about">About</a>
-        <mat-divider></mat-divider> -->
-        <div>
-          <a mat-list-item routerLink="/">
-            Home
-          </a>
-        </div>
-    </div>
+    
+  
 
     <mat-sidenav-content>
       <mat-toolbar color="primary">
         <div class="toolbar">
-          <button mat-stroke-button>Menu</button>
+          <button mat-button><h1>Menu</h1></button>
+          <button mat-button [routerLink]="['/']">
+            <h1>Home</h1>
+          </button>
         </div>
+        
       </mat-toolbar>
+
+      <!-- <mat-nav-list>
+        <div>
+          <a mat-list-item routerLink="/">
+            <h1>Home</h1>
+          </a>
+        </div>
+      </mat-nav-list> -->
     </mat-sidenav-content>
 
+    
   </mat-sidenav-container>
   

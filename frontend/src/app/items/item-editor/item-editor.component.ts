@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ItemService } from '../item.service';
-import { Category, Item } from '../item.model';
+import { Category, ItemData } from '../item.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -62,7 +62,7 @@ export class ItemEditorComponent {
 
       if (!this.isNew) {
         this.id = this.route.snapshot.params['item_id'];
-        let currentItem : Item = this.itemService.getItem(this.id) as Item
+        let currentItem : ItemData = this.itemService.getItem(this.id) as ItemData
         if( currentItem!= null){
           this.itemForm.setValue({
             name: currentItem.name,

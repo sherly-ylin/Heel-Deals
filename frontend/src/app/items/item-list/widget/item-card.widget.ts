@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { Item } from "../../item.model";
+import { ItemData } from "../../item.model";
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Item } from "../../item.model";
     styleUrl:'./item-card.widget.scss',
 })
 export class ItemCard{
-    @Input() item!: Item;
-    @Output() addButtonPressed = new EventEmitter<Item>();
+    @Input() item!: ItemData;
+    @Output() addButtonPressed = new EventEmitter<ItemData>();
     constructor(){}
 }
