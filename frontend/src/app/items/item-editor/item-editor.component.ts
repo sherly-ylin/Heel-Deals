@@ -14,7 +14,7 @@ export class ItemEditorComponent {
   public static Route = {
     path: 'items/edit/:item_id',
     title: 'Item Editor',
-    Component: ItemEditorComponent
+    component: ItemEditorComponent
   }
 
   // categoryKeys = Object.entries(Category).map(([key, value]) => ({ name:key, value:value }));

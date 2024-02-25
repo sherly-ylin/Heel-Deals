@@ -10,7 +10,7 @@ export class HomeComponent {
   public static Route = {
     path: '',
     title: 'Heel Deals',
-    Component: HomeComponent
+    component: HomeComponent
   }
 
   constructor(public route: ActivatedRoute, public router: Router){}

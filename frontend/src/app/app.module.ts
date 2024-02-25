@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* HTTP and Auth */
 import { RouterModule } from '@angular/router';
+// import { AuthModule } from '@auth0/auth0-angular';
 
 /* UI / Material Dependencies */
 import { DatePipe, NgForOf } from '@angular/common';
@@ -66,6 +67,13 @@ import { ItemCard } from './items/item-list/widget/item-card.widget';
     ReactiveFormsModule,
     RouterModule,
 
+    // AuthModule.forRoot({
+    //   domain: 'dev-08gfiviz2cofbd3s.us.auth0.com',
+    //   clientId: '2QmE0VL94t1qvsUtu0G51Zdvi7s16FVm',
+    //   authorizationParams: {
+    //     redirect_uri: window.location.origin,
+    //   },
+    // }),
   ],
   providers: [
     provideAnimationsAsync()
