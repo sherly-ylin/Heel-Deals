@@ -22,7 +22,7 @@ export class ItemListComponent {
   }
 
 
-  // addItem(item: ){
-  //   this.itemService.addItem(item);
-  // }
+  addItem(item: ItemData){
+    // this.itemService.addItem(item);
+  }
 }
