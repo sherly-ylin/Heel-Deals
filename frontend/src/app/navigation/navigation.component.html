@@ -1,43 +1,26 @@
-<!-- <mat-sidenav-container class="sidenav-container"> -->
-    <!-- <mat-sidenav>
-      <div class="inner-sidenav-container">
-        <mat-nav-list>
-          <a mat-list-item class="logo-item" routerLink="/">
-            <picture>
-                <source
-                class="logo" srcset="/assets/unc-logo.jpg" alt="Logo" />
-                <img class="logo" src="/assets/unc-logo.jpg" alt="Logo" />
-            </picture>
-          </a>
-        </mat-nav-list>
-      </div>
-    </mat-sidenav> -->
+<mat-toolbar color="primary">
+  <div class="toolbar">
+    <a class="logo" routerLink="/items">
+      <img src="/assets/heeldeals-logo.png" alt="Logo">
+    </a>
+    <span>Heel Deals</span>
+    <span class="spacer"></span>
+    <div class="nav">
+      <button mat-flat-button color="accent"[routerLink]="['/items']">Browse</button>
+      <button mat-flat-button [routerLink]="['/item/edit/-1']">Post Item </button>
+      <button mat-flat-button [routerLink]="['/cart']">Cart</button>
+      <button mat-flat-button [routerLink]="['/profile']">Profile</button>
+    </div>
+    <button mat-raised-button color="accent">
+        Login
+    </button>
 
-    <!-- <mat-sidenav-content> -->
-      <mat-toolbar color="primary">
-        <div class="toolbar">
-          <a class="logo" routerLink="/">
-            <img src="/assets/heeldeals-logo.png" alt="Logo">
-          </a>
-          
-          <!-- <button mat-button appearance="outlined" [routerLink]="['/']"><h1>Browse</h1></button>
-          <button mat-button appearance="outlined" [routerLink]="['/home']">
-            <h1>Home</h1>
-          </button> -->
+    
+  </div>
+</mat-toolbar>
 
-          <!-- <button mat-button appearance="outlined" (click)="router.navigate(['/items/edit/new'])"><h1>Post Item</h1></button> -->
-            <button mat-button appearance="outlined" [routerLink]="['/cart']">
-              <h1>Cart</h1>
-            </button>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
 
-          
-        </div>
-      </mat-toolbar>
-
-      <div class="main">
-        <router-outlet></router-outlet>
-      </div>
-    <!-- </mat-sidenav-content> -->
-  <!-- </mat-sidenav-container> -->
-  
   

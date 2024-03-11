@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ItemListComponent {
   public static Route = {
-    path: '',
+    path: 'items',
     title: 'Items',
     component: ItemListComponent
   }
@@ -36,7 +36,6 @@ export class ItemListComponent {
     this.cartService.addItem(item);
     this.snackBar.open('Item Added', '', { duration: 2000 });
   }
-
 
 
 }

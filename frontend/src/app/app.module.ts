@@ -37,6 +37,8 @@ import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemCard } from './items/item-list/widget/item-card.widget';
 import { CartComponent } from './cart/cart.component';
 import { CartItemCard } from './cart/widget/cart-item-card.widget';
+import { ProfileDetailsComponent } from './profile/profile-details/profile-details.component';
+import { ProfileEditorComponent } from './profile/profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { CartItemCard } from './cart/widget/cart-item-card.widget';
     ItemEditorComponent,
     ItemCard,
     CartComponent,
-    CartItemCard
+    CartItemCard,
+    ProfileDetailsComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,

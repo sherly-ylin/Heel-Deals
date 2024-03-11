@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
-import { ItemListComponent } from '../items/item-list/item-list.component';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -8,12 +7,7 @@ import { ItemListComponent } from '../items/item-list/item-list.component';
   styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
-  public static Route = {
-    path: '',
-    title: 'Navigation',
-    component: NavigationComponent
-  }
-  constructor(public route: ActivatedRoute, public router: Router){
-    // router.navigateByUrl('/items');
+  constructor(public router: Router){
+
   }
 }

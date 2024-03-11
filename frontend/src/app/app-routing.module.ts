@@ -5,16 +5,14 @@ import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CartComponent } from './cart/cart.component';
+import { ProfileDetailsComponent } from './profile/profile-details/profile-details.component';
 
 const routes: Routes = [
-  // HomeComponent.Route,
-  // NavigationComponent.Route,
+  HomeComponent.Route,
   ItemEditorComponent.Route,
   ItemListComponent.Route,
-  {
-    path: 'cart',
-    component: CartComponent
-  }
+  CartComponent.Route,
+  ProfileDetailsComponent.Route,
 ]
 
 @NgModule({

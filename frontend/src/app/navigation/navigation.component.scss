@@ -24,7 +24,8 @@
     top: 0;
     z-index: 2;
     overflow: hidden;
-    background: #032446;
+    background: #102c59;
+    // background: #161b7f;
 }
 
 .mat-toolbar {
@@ -39,6 +40,22 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.nav{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.nav button{
+    margin: 0 0.5rem;
+    width: fit-content;
+
+}
+
 
 .logo {
     position: static;
@@ -63,4 +80,8 @@ img{
     flex-direction: column;
     align-items: center;
     background-color: #7BAFD4;
+}
+
+.spacer{
+    flex: 1 1 auto;
 }

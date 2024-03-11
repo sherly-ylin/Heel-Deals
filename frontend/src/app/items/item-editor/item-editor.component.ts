@@ -53,19 +53,7 @@ export class ItemEditorComponent {
     ){}
     ngOnInit():void{
       this.id = this.route.snapshot.params['item_id'];
-      this.isNew = !this.itemService.hasItem(this.id);
-      // If the timer is not new, set existing timer data and update the forms.
-      // if (!this.isNew) {
-      //   this.id = route.snapshot.params['pomo_id'];
-      //   itemService.getItem(this.id).subscribe((itemData) => {
-      //     this.itemForm.setValue({
-      //       name: itemData.name,
-      //       description: itemData.description,
-      //       cost: itemData.cost,
-      //       category: itemData.category
-      //     });
-      // });
-
+      this.isNew = this.id==-1;
       if (!this.isNew) {
         this.id = this.route.snapshot.params['item_id'];
         let currentItem : ItemData = this.itemService.getItem(this.id) as ItemData
@@ -93,11 +81,11 @@ export class ItemEditorComponent {
           this.onSuccess();
         } else {
           // Edit the existing item
-          if(this.itemService.editItem(
-            this.id,
-            this.itemForm.value.name!,
-            this.itemForm.value.cost!, 
-            this.itemForm.value.description!
+          if(this.itemService.editItem({
+            id: this.id,
+            name: this.itemForm.value.name!,
+            cost: this.itemForm.value.cost!, 
+            description: this.itemForm.value.description!}
             )){
               this.onSuccess();
             }else{
@@ -113,7 +101,7 @@ export class ItemEditorComponent {
 
   
     private onSuccess(): void {
-      this.router.navigate(['/']);
+      this.router.navigate(['/items']);
   
       let message: string = !this.isNew ? 'Item Updated' : 'Item Created';
   

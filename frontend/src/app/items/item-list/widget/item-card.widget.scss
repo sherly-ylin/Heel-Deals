@@ -1,7 +1,8 @@
 mat-card {
     display: flex;
     flex-direction: column;
-    width: 325px;
+    min-width: 325px;
+    max-width: fit-content;
     height: fit-content;
     max-height: 400px;
     padding: 0 1rem;
@@ -114,6 +115,10 @@ mat-card-actions {
 }
 a{
     padding: 0 5px 0 5px;
+}
+
+.buttons{
+    padding-right: 0.5rem;
 }
 
 /* Override Mat UI's preset z-index for button */

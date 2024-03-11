@@ -9,7 +9,10 @@ import { ItemData } from '../items/item.model';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent {
-
+  public static Route={
+    path: 'cart',
+    component: CartComponent
+  }
   constructor(public cartService: CartService){}
 
 

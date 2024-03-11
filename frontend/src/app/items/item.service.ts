@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ItemResponse, ItemData } from './item.model';
-import { UserData, UserResponse } from '../models/user.model';
+import { UserData, UserResponse } from '../profile/profile-details/user.model';
 import { Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -42,7 +42,7 @@ export class ItemService {
   //   return this.http.get<ItemData>('/items/{id}');
   // }
 
-  addItem(
+  addItem( 
     name: string,
     cost: number,
     description: string
@@ -63,18 +63,14 @@ export class ItemService {
   //   return this.http.post<ItemResponse>('/items', request);
   // }
 
-  editItem(
-    id: number,
-    name: string,
-    cost: number,
-    description: string
-    ): boolean{
+  /* Edit item */
+  editItem(item: ItemData): boolean{
       for (let i = 0; i < this.items.length; i++) {
-        if (this.items[i].id == id) {
+        if (this.items[i].id == item.id) {
           // console.log('item to edit found');
-          this.items[i].cost= cost;
-          this.items[i].name = name;
-          this.items[i].description = description;
+          this.items[i].cost= item.cost;
+          this.items[i].name = item.name;
+          this.items[i].description = item.description;
           console.log("item edited!");
           return true;
         }
@@ -86,6 +82,7 @@ export class ItemService {
   //   return this.http.put<ItemResponse>('/items', request);
   // }
 
+  /* Delete item, return true if success, false if not found */
   deleteItem(item: ItemData): boolean{
       for (let i = 0; i < this.items.length; i++) {
         if (this.items[i].id == item.id) {
@@ -97,6 +94,7 @@ export class ItemService {
 
   }
 
+  /* Check if item already exists by id */
   hasItem(id:number): boolean{
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i].id == id) {
