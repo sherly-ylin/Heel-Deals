@@ -1,4 +1,6 @@
+<!-- <div class="topspace"></div> -->
 <mat-toolbar color="primary">
+  
   <div class="toolbar">
     <a class="logo" routerLink="/items">
       <img src="/assets/heeldeals-logo.png" alt="Logo">
@@ -9,15 +11,25 @@
       <button mat-flat-button color="accent"[routerLink]="['/items']">Browse</button>
       <button mat-flat-button [routerLink]="['/item/edit/-1']">Post Item </button>
       <button mat-flat-button [routerLink]="['/cart']">Cart</button>
-      <button mat-flat-button [routerLink]="['/profile']">Profile</button>
+      
     </div>
     <button mat-raised-button color="accent">
         Login
     </button>
 
+    <button mat-raised-button [matMenuTriggerFor]="menu">Me</button>
+    <mat-menu #menu="matMenu">
+      <!-- <button mat-menu-item [routerLink]="['/profile/edit/1']">Edit Profile</button> -->
+      <button mat-menu-item [routerLink]="['/profile/edit/1']">Edit Profile</button>
+      <button mat-menu-item>My Items</button>
+      <button mat-menu-item>My Purchases</button>
+    </mat-menu>
     
   </div>
+  
 </mat-toolbar>
+<div class="topspace"></div>
+
 
 <div class="main">
   <router-outlet></router-outlet>

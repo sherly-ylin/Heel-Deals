@@ -26,6 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,8 +38,8 @@ import { ItemEditorComponent } from './items/item-editor/item-editor.component';
 import { ItemCard } from './items/item-list/widget/item-card.widget';
 import { CartComponent } from './cart/cart.component';
 import { CartItemCard } from './cart/widget/cart-item-card.widget';
-import { ProfileDetailsComponent } from './profile/profile-details/profile-details.component';
-import { ProfileEditorComponent } from './profile/profile-editor/profile-editor.component';
+import { ProfileEditorComponent } from './user/profile-editor/profile-editor.component';
+import { SellerPageComponent } from './user/seller-page/seller-page.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +51,8 @@ import { ProfileEditorComponent } from './profile/profile-editor/profile-editor.
     ItemCard,
     CartComponent,
     CartItemCard,
-    ProfileDetailsComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    SellerPageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +67,7 @@ import { ProfileEditorComponent } from './profile/profile-editor/profile-editor.
     MatIconModule,
     MatInputModule,
     MatListModule,
+    MatMenuModule,
     MatProgressBarModule,
     MatSidenavModule,
     MatSliderModule,
@@ -75,6 +77,8 @@ import { ProfileEditorComponent } from './profile/profile-editor/profile-editor.
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
+
+
     RouterModule,
 
     // AuthModule.forRoot({

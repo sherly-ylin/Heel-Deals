@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ItemResponse, ItemData } from './item.model';
-import { UserData, UserResponse } from '../profile/profile-details/user.model';
+import { ItemData, ItemResponse, UserData, UserResponse  } from '../models';
 import { Observable, Subject } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -12,10 +11,18 @@ export class ItemService {
   nextItemId: number = 1;
 
   items: ItemData[] = [
-    {id: 0,
-      name: "name",
+    {id: 1,
+      name: "item 1",
       cost: 0,
-      description: "description"}
+      description: "description 1"},
+    {id: 2,
+      name: "item 2",
+      cost: 17,
+      description: "description 2"},
+    {id: 3,
+      name: "item 3",
+      cost: 120,
+      description: "description 3"},
   ];
 
   nextItemIdChange: Subject<number> = new Subject<number>();

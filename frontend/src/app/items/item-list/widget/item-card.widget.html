@@ -1,34 +1,39 @@
 <mat-card class="card" appearance="outlined">
-    <mat-card-header>
-        <div class="top-container">
-            <!--item image-->
-            <img mat-card-md-image src="/assets/no-image2.png"/>
-            <mat-card-title class="name">
-                {{item.name}}
-            </mat-card-title>
-
-            <mat-card-content class="description">
-                Description: {{item.description}}
-            </mat-card-content>
-            
-        </div>
+    
+    <mat-card-header class=header>
+        <mat-card-subtitle class="seller-info">
+            Posted [time] ago, by [user]
+        </mat-card-subtitle>
+        <!--item image-->
+        <img mat-card-md-image src="/assets/no-image2.png"/>
+        <mat-card-title class="name">
+            {{item.name}}
+        </mat-card-title>
     </mat-card-header>
     <div class="bottom-container">
-        <mat-card-content class="cost" *ngIf="item.cost>0">
-            {{item.cost | currency}}
+        <mat-card-content class="cost" >
+            <span *ngIf="item.cost>0">{{item.cost | currency}}</span>
+            <h3 *ngIf="item.cost==0">Free!</h3>
         </mat-card-content>
-
-        <div class="cost" *ngIf="item.cost==0">
-            <h2>Free!</h2>
-        </div>
         
-        <mat-card-actions class="buttons">
+        <!-- Buyer View -->
+        <mat-card-actions *ngIf="url=='/items'">
             <a class="links"
                 [routerLink]="['/items']">
                 <button mat-mini-fab color="primary" (click)="addButtonPressed.emit(item)">
-                    <mat-icon>add</mat-icon>
+                    <mat-icon>shopping_cart</mat-icon>
                 </button>
             </a>
+            <a class="links"
+                [routerLink]="['/items']">
+                <button mat-mini-fab color="primary" (click)="addButtonPressed.emit(item)">
+                    <mat-icon>bookmark</mat-icon>
+                </button>
+            </a>
+        </mat-card-actions>
+        
+        <!-- Seller View -->
+        <mat-card-actions *ngIf="url!='/items'">
             <a class="links"
             [routerLink]="['/item/edit', item.id]">
                 <button mat-mini-fab color="primary">

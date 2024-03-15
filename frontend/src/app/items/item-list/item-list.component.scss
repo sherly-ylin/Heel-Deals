@@ -2,6 +2,7 @@
     height: 100%;
     padding: 1.5rem;
     background-color: #7BAFD4;
+    // background-color: #fff;
     
 }
 
@@ -27,5 +28,6 @@ mat-card-content{
     flex-wrap: wrap;
     flex-flow: row wrap;
     align-items: center;
+    justify-content:stretch;
     padding: 1rem;
 }

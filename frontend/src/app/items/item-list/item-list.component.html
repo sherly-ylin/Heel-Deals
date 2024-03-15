@@ -11,6 +11,7 @@
           <!-- List of items -->
           <item-card
             [item]="item"
+            [url]="this.router.url"
             *ngFor="let item of itemService.getItems()" 
             (addButtonPressed)="addItem($event)"
             (deleteButtonPressed)="itemService.deleteItem($event)"

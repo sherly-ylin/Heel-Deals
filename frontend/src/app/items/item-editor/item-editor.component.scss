@@ -3,13 +3,14 @@
     position: relative;
     top: 10vh;
     align-self: center;
-    min-width: 60vw;
-    max-width: 640px;
+    min-width: 70vw;
+    max-width: 400px;
 }
 
 .mat-mdc-form-field {
     width: stretch;
     margin-bottom: 5px;
+    caret-color: #111;
 }
 
 .mat-mdc-card-actions .mdc-button {
@@ -23,9 +24,9 @@ mat-card-content {
     margin-top: 8px;    
 }
 
+textarea{
+    height: fit-content;
+    max-height: 5rem;
+}
 
-// mat-card{
-//     background-color: #7BAFD4;
-    
-// }
 

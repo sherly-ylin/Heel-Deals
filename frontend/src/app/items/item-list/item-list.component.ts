@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Router } from '@angular/router';
-import { ItemData } from '../item.model';
+import { ItemData } from '../../models';
 import { CartService } from '../../cart/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({

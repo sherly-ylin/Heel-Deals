@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { ItemData } from "../../item.model";
+import { ItemData } from "../../../models";
 
 
 @Component({
@@ -9,6 +9,7 @@ import { ItemData } from "../../item.model";
 })
 export class ItemCard{
     @Input() item!: ItemData;
+    @Input() url!: string;
     @Output() addButtonPressed = new EventEmitter<ItemData>();
     @Output() deleteButtonPressed = new EventEmitter<ItemData>()
     constructor(){}
